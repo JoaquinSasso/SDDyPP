@@ -30,20 +30,20 @@ int main(void)
     printf("--- SIN barrier ---\n");
     #pragma omp parallel num_threads(NH)
     {
-        int numHilo = omp_get_thread_num();   /* declarada adentro => private automatica */
+        int tid = omp_get_thread_num();   /* declarada adentro => private automatica */
         int suma = 0, j;
 
         /* FASE 1: cada hilo escribe SOLO su casilla.
            El usleep hace que los hilos terminen en momentos distintos. */
-        usleep(numHilo * 100000);
-        v[numHilo] = numHilo + 1;
+        usleep(tid * 100000);
+        v[tid] = tid + 1;
 
         /* FASE 2: cada hilo necesita LEER TODO el vector.
            Como no hay punto de sincronizacion, el hilo 0 (el mas rapido)
            lee posiciones que los otros hilos todavia no escribieron. */
         for (j = 0; j < NH; j++) suma += v[j];
 
-        printf("Hilo %d -> suma leida = %d (esperado %d)\n", numHilo, suma, esperado);
+        printf("Hilo %d -> suma leida = %d (esperado %d)\n", tid, suma, esperado);
     }
 
     /* ================= CASO 2: CON barrier ================= */
@@ -52,21 +52,21 @@ int main(void)
     printf("\n--- CON barrier ---\n");
     #pragma omp parallel num_threads(NH)
     {
-        int numHilo = omp_get_thread_num();
+        int tid = omp_get_thread_num();
         int suma = 0, j;
 
-        usleep(numHilo * 100000);
-        v[numHilo] = numHilo + 1;                 /* FASE 1 */
+        usleep(tid * 100000);
+        v[tid] = tid + 1;                 /* FASE 1 */
 
         /* Punto de encuentro: cada hilo se frena aca hasta que LLEGAN TODOS.
            Recien entonces el vector esta completo y es seguro leerlo.
            IMPORTANTE: todos los hilos del equipo deben alcanzar el barrier;
-           si lo pusieramos dentro de un 'if (numHilo==0)' el programa se cuelga. */
+           si lo pusieramos dentro de un 'if (tid==0)' el programa se cuelga. */
         #pragma omp barrier
 
         for (j = 0; j < NH; j++) suma += v[j];   /* FASE 2 */
 
-        printf("Hilo %d -> suma leida = %d (esperado %d)\n", numHilo, suma, esperado);
+        printf("Hilo %d -> suma leida = %d (esperado %d)\n", tid, suma, esperado);
     }
 
     return 0;

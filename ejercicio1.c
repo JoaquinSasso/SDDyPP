@@ -1,3 +1,4 @@
+//gcc -fopenmp -o ejercicio1.exe ejercicio1.c && ./ejercicio1.exe
 #include <stdio.h>
 #include <omp.h>
 

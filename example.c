@@ -1,3 +1,8 @@
+/* ============================================================
+   Compilar:  gcc -fopenmp example.c -o example
+   Ejecutar:  ./example
+   Compilar y ejecutar: gcc -fopenmp example.c -o example && ./example
+   ============================================================ */
 #include <stdio.h>
 #include <omp.h>
 
@@ -11,5 +16,3 @@ int main()
    printf("Suma = %d\n", suma);
    return 0;
 }
-
-//gcc -fopenmp -o example.exe example.c && ./example.exe

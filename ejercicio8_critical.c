@@ -5,9 +5,9 @@
    varios hilos a la vez se corrompe (condicion de carrera), y
    que #pragma omp critical lo soluciona serializando el acceso.
 
-   Compilar:  gcc -fopenmp -O0 ej8_critical.c -o ej8_critical
-   Ejecutar:  ./ej8_critical
-   Compilar y ejecutar: gcc -fopenmp -O0 ej8_critical.c -o ej8_critical && ./ej8_critical
+   Compilar:  gcc -fopenmp -O0 ejercicio8_critical.c -o ejercicio8_critical
+   Ejecutar:  ./ejercicio8_critical
+   Compilar y ejecutar: gcc -fopenmp -O0 ejercicio8_critical.c -o ejercicio8_critical && ./ejercicio8_critical
 
    Se compila con -O0 a propósito. Con optimización agresiva el compilador 
    puede mantener la suma en un registro y cambiar el patrón del error. 

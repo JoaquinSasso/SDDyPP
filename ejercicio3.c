@@ -22,6 +22,12 @@
    homogénea (evaluar vector[i] < 500) y evita la sobrecarga (overhead) de sincronización dinámica.
 */
 
+/* ============================================================
+   Compilar:  gcc -fopenmp ejercicio3.c -o ejercicio3
+   Ejecutar:  ./ejercicio3
+   Compilar y ejecutar: gcc -fopenmp ejercicio3.c -o ejercicio3 && ./ejercicio3
+   ============================================================ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>

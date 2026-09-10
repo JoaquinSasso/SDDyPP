@@ -1,3 +1,9 @@
+/* ============================================================
+   Compilar:  gcc -fopenmp ejercicio4.c -o ejercicio4
+   Ejecutar:  ./ejercicio4
+   Compilar y ejecutar: gcc -fopenmp ejercicio4.c -o ejercicio4 && ./ejercicio4
+   ============================================================ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>

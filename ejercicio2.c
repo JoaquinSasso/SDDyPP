@@ -14,6 +14,12 @@ se comparten los datos entre los distintos hilos.
   * reduction: Copia local neutra que combina los resultados de manera segura al terminar.
 */
 
+/* ============================================================
+   Compilar:  gcc -fopenmp ejercicio2.c -o ejercicio2
+   Ejecutar:  ./ejercicio2
+   Compilar y ejecutar: gcc -fopenmp ejercicio2.c -o ejercicio2 && ./ejercicio2
+   ============================================================ */
+
 #include <stdio.h>
 #include <omp.h>
 

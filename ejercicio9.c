@@ -1,9 +1,9 @@
 /* ============================================================
    Ejercicio 9 - Suma de vectores con parallel + for schedule(dynamic)
    ------------------------------------------------------------
-   Compilar:  gcc -fopenmp ej9.c -o ej9
-   Ejecutar:  ./ej9
-   Compilar y ejecutar: gcc -fopenmp ej9.c -o ej9 && ./ej9
+   Compilar:  gcc -fopenmp ejercicio9.c -o ejercicio9
+   Ejecutar:  ./ejercicio9
+   Compilar y ejecutar: gcc -fopenmp ejercicio9.c -o ejercicio9 && ./ejercicio9
    ============================================================ */
 
 #include <omp.h>

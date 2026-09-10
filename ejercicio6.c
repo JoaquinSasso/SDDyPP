@@ -1,3 +1,9 @@
+/* ============================================================
+   Compilar:  gcc -fopenmp ejercicio6.c -o ejercicio6
+   Ejecutar:  ./ejercicio6
+   Compilar y ejecutar: gcc -fopenmp ejercicio6.c -o ejercicio6 && ./ejercicio6
+   ============================================================ */
+
 //Ejercicio 6 Realizar un código paralelo donde se encuentre el máximo y el mínimo
 //de un vector de dimensión N= 10000, 100000, 5000000, utilizando 4, 8 y 32 hilos.
 //Tome el tiempo de cada una de las ejecuciones.

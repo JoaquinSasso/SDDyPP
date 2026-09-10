@@ -5,7 +5,11 @@
 - Si el paralelismo anidado está disponible.
 - Manipule la generación de varios threads y modificación del número de threads
 */
-
+/* ============================================================
+   Compilar:  gcc -fopenmp ejercicio1.c -o ejercicio1
+   Ejecutar:  ./ejercicio1
+   Compilar y ejecutar: gcc -fopenmp ejercicio1.c -o ejercicio1 && ./ejercicio1
+   ============================================================ */
 #include <stdio.h>
 #include <omp.h>
 

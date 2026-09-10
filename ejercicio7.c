@@ -1,3 +1,8 @@
+/* ============================================================
+   Compilar:  gcc -fopenmp ejercicio7.c -o ejercicio7
+   Ejecutar:  ./ejercicio7
+   Compilar y ejecutar: gcc -fopenmp ejercicio7.c -o ejercicio7 && ./ejercicio7
+   ============================================================ */
 //Ejercicio 7 Genere un programa paralelo que permita buscar un valor en un vector
 //desordenado de dimensión N= 400000, 1000000. Indique la cantidad de hilos en su
 //procesador y encuentre la cantidad de hilos que minimizan el tiempo de ejecución.

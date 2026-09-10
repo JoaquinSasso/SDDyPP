@@ -6,9 +6,9 @@
    rapidos leen datos que todavia no fueron escritos; con barrier
    nadie avanza hasta que llegan todos.
 
-   Compilar:  gcc -fopenmp ej8_barrier.c -o ej8_barrier
-   Ejecutar:  ./ej8_barrier
-   Compilar y ejecutar: gcc -fopenmp ej8_barrier.c -o ej8_barrier && ./ej8_barrier
+   Compilar:  gcc -fopenmp ejercicio8_barrier.c -o ejercicio8_barrier
+   Ejecutar:  ./ejercicio8_barrier
+   Compilar y ejecutar: gcc -fopenmp ejercicio8_barrier.c -o ejercicio8_barrier && ./ejercicio8_barrier
    ============================================================ */
 
 #include <stdio.h>
